@@ -1,0 +1,27 @@
+
+
+<div class="container">
+
+<h1> <%= @cocktail.name %></h1>
+
+<div>
+  <%= simple_form_for [ @cocktail, @dose ] do |f| %>
+  <%= f.association :ingredient, as: :select%>
+  <%= f.input :description %>
+  <%= f.button :submit, class: "btn btn-primary"%>
+<% end %>
+</div>
+
+<ul class="list-group">
+  <% @cocktail.doses.each do |dose| %>
+    <li class="list-group-item"><%= dose.description %> <%= dose.ingredient.name %></li>
+    <p> <%= link_to 'Destroy', dose_path(dose.id),
+            data: {:confirm => 'Are you sure?'}, :method => :delete %> </p>
+  <% end %>
+</ul>
+
+<div>
+  <%= link_to "Edit cocktail name", edit_cocktail_path(@cocktail) %>
+  <%= link_to 'See all coktails', cocktails_path %>
+</div>
+
