@@ -1,9 +1,18 @@
-<div >
-<h1>Fill the form to create a new cocktail!</h1>
 
-<%= render 'form' %>
+<div> <%= render 'menu' %> </div>
+<div class="background1">
+  <div class="form-container">
 
-</div>
-<div>
-<p> <%= link_to "See all cocktails", cocktails_path, class: "btn btn-primary"%> </p>
+    <div >
+      <h1 id="h1-newcoc">Fill the form to <span> create </span>  a new cocktail!</h1>
+
+      <%= render 'form' %>
+
+    </div>
+
+    <div>
+      <p class="align-right"> <%= link_to "See all cocktails", cocktails_path, class: "btn-ctall-new"%> </p>
+    </div>
+
+  </div>
 </div>

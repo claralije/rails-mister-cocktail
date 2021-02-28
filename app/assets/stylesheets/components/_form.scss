@@ -1,0 +1,29 @@
+.container-form {
+
+}
+
+.group {
+  position:relative;
+  margin-bottom:30px;
+}
+
+label          {
+  color:#999;
+  font-size:18px;
+
+}
+
+.btn-submit {
+  padding: 8px 8px;
+  border-radius: 5px;
+  color: white;
+  font-size: 15px;
+  background-color: #FF9B80;
+
+  text-decoration: none;
+  &:hover {
+    color: black;
+    text-decoration: none;
+    background-color: #92FFA4;
+  }
+}

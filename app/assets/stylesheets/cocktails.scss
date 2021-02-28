@@ -1,3 +1,207 @@
 // Place all the styles related to the cocktails controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.navbar-lewagon {
+  justify-content: space-between;
+  background: white;
+
+}
+
+.navbar-lewagon .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-lewagon .navbar-brand img {
+  width: 50px;
+}
+
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 102px;
+}
+
+
+.button-card {
+  display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .fas {
+      color: #7A7A7A;
+      &:hover {
+        color: #FF9B80;
+      }
+    }
+}
+
+.btn-cta {
+  background-color: #FF9B80;
+  padding: 8px 8px;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  &:hover {
+    background-color: #92FFA4;
+    color: white;
+    text-decoration: none;
+    font-weight: lighter;
+  }
+
+}
+
+.drink-it {
+  padding: 8px 8px;
+  border-radius: 5px;
+  background-color: #92FFA4;
+  color: white;
+  text-decoration: none;
+  &:hover {
+    background-color: #6CE580;
+    text-decoration: none;
+    color: white;
+  }
+}
+
+.card {
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.btn-ctall {
+  padding: 8px 8px;
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 0.5px;
+  border-color: #92FFA4;
+  color: #92FFA4;
+  text-decoration: none;
+  &:hover {
+    color: black;
+    text-decoration: none;
+  }
+
+}
+
+.align-right {
+  text-align: right;
+  margin-top: -29px;
+  margin-bottom: 20px;
+}
+
+
+.btn-ctall-new {
+  padding: 8px 8px;
+  border-radius: 5px;
+  color: #272727;
+  font-size: 15px;
+  text-decoration: none;
+  &:hover {
+  text-decoration: none;
+  font-weight: bold;
+  color: #272727;
+  }
+}
+
+.button-home {
+  font-size: 20px;
+  background-color: white;
+  border-radius: 5px;
+  color: #92FFA4;
+  padding: 10px 10px;
+  text-decoration: none;
+  &:hover {
+    color: white;
+    text-decoration: none;
+    background-color: #92FFA4;
+  }
+}
+
+#h1-newcoc {
+color: #272727;
+font-size: 30px;
+span {
+font-size: 25px;
+margin-right: 7px;
+text-align: center;
+padding: 3px 3px;
+color: white;
+background-color: #92FFA4;
+text-transform: uppercase;
+  &:hover {
+    background-color: #FF9B80;
+  }
+}
+}
+
+.nav-item {
+margin-left: 20px;
+}
+
+
+.card-img-top {
+  height: 250px;
+}
+
+
+.coc-container {
+  box-sizing: 0;
+ text-align: center;
+ padding: 250px 250px;
+ background-image: url('https://i.pinimg.com/originals/9d/f8/9f/9df89f5da3a690c4cd4fb4971d673cdd.jpg');
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 40px;
+}
+
+.background1 {
+  background-image: url('https://seminyak.hotelindigo.com/uploads/Cafe-Bar/1900x690/Tree%20Bar%20-%202.jpg');
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  padding: 180px 50px;
+}
+
+#banner-typed-text {
+  font-size: 70px;
+  color: white;
+  width: 100px;
+}
+
+.nav-item p {
+  margin-top: 1rem;
+}
+
+.card-a {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 15px;
+  color: #7A7A7A;
+}
+
+body {
+  background: white;
+}
+
+.form-container {
+  padding: 20px 20px;
+  background-color: rgba(255, 255, 255, 0.85);
+  width: 600px;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+
+
+
+

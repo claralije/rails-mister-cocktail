@@ -1,4 +1,14 @@
+<div class="container-form">
+
 <%= simple_form_for @cocktail do |f| %>
-  <%= f.input :name %>
-  <%= f.button :submit, class: "btn btn-primary"%>
+  <div class="group">
+  <%= f.input :name, class: "label" %>
+  </div>
+  <div class="group">
+  <%= f.input :description, class: "label" %>
+  </div>
+  <%= f.input :photo, as: :file %>
+  <%= f.button :submit, class: "btn-submit"%>
 <% end %>
+
+</div>

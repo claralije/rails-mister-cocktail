@@ -1,27 +1,56 @@
+<div class="page">
 
+<div> <%= render 'menu' %> </div>
 
-<div class="container">
+  <div class="container">
 
-<h1> <%= @cocktail.name %></h1>
+    <div class="row">
 
-<div>
-  <%= simple_form_for [ @cocktail, @dose ] do |f| %>
-  <%= f.association :ingredient, as: :select%>
-  <%= f.input :description %>
-  <%= f.button :submit, class: "btn btn-primary"%>
-<% end %>
-</div>
+      <div class="col-8">
 
-<ul class="list-group">
-  <% @cocktail.doses.each do |dose| %>
-    <li class="list-group-item"><%= dose.description %> <%= dose.ingredient.name %></li>
-    <p> <%= link_to 'Destroy', dose_path(dose.id),
-            data: {:confirm => 'Are you sure?'}, :method => :delete %> </p>
-  <% end %>
-</ul>
+        <h1>
+          <span>  <%= @cocktail.name %></span>
+        </h1>
+        <div>
 
-<div>
-  <%= link_to "Edit cocktail name", edit_cocktail_path(@cocktail) %>
-  <%= link_to 'See all coktails', cocktails_path %>
+          <h2> Add ingredients </h2>
+          <hr></hr>
+
+          <%= simple_form_for [ @cocktail, @dose ] do |f| %>
+          <%= f.association :ingredient, as: :select, class: "label"%>
+          <%= f.input :description, class: "label" %>
+          <%= f.button :submit, class: "btn-completion"%>
+          <% end %>
+        </div>
+
+        <div id="les-cta">
+          <%= link_to "Edit cocktail", edit_cocktail_path(@cocktail), class: "edit-c" %>
+          <%= link_to 'See all coktails', cocktails_path, class: "see-all" %>
+        </div>
+
+      </div>
+
+      <div class="col-4">
+        <div class="test">
+        <%= cl_image_tag @cocktail.photo.key, height: 225, width: 300, crop: :fill %>
+        </div>
+          <h2> Ingredients </h2>
+          <hr></hr>
+
+        <ul class="list-group">
+          <% @cocktail.doses.each do |dose| %>
+          <li class="list-group-item"><%= dose.description %> <%= dose.ingredient.name %>
+          <%= link_to dose_path(dose.id), method: :delete, data: { confirm: "Are you sure?" } do %>
+          <i class="fas fa-trash"></i>
+          <% end %>
+          </li>
+          <% end %>
+
+        </ul>
+
+      </div>
+
+    </div>
+  </div>
 </div>
 
